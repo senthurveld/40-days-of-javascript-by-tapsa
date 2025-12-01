@@ -128,30 +128,77 @@ console.log("cat" ?? null);
 // Ternary Operator
 
 let age = 32;
-console.log(age >= 60 ? "Senior Citizen" 
-                    : "Non Senior Citizen");
+console.log(age >= 60 ? "Senior Citizen" : "Non Senior Citizen");
 
-// BitWise Operators 
-    // 10 in decimal
-    // 10 in 32 bits representation od 0,1
+// BitWise Operators
+// 10 in decimal
+// 10 in 32 bits representation od 0,1
 
-// &,  |,  ^,    ~,      <<,         >> 
-//and, or, xor, not, shift-left, shift-right 
+// &,  |,  ^,    ~,      <<,         >>
+//and, or, xor, not, shift-left, shift-right
 
- console.log(15 & 9)
- console.log(9 & 15)
+//  console.log(15 & 9)
+//  console.log(9 & 15)
 
- console.log(15 | 9 )
- console.log(9 | 15)
+//  console.log(15 | 9 )
+//  console.log(9 | 15)
 
- console.log(15 ^ 9)
- console.log(9 ^ 15)
+//  console.log(15 ^ 9)
+//  console.log(9 ^ 15)
 
- console.log(9 << 2)
- console.log(15 << 9)
+//  console.log(9 << 2)
+//  console.log(15 << 9)
 
- console.log(9 >> 2)
- console.log(15 >> 9)
- 
- console.log()
- console.log()
+//  console.log(9 >> 2)
+//  console.log(15 >> 9)
+
+// Loops
+// For Loops
+
+// for ( let i = 0; i <=2; ++i) {
+//     console.log('hello'+ i++);
+// }
+// for ( let j = 0; j <=2; j++) {
+//     console.log('hello'+ ++j);
+// }
+
+// let nameIs = 'senthurvelduraisamik'
+// for (let i = 0; i < nameIs.length; i++) {
+//     console.log(nameIs.charAt(i++)); //for odd letters
+//     console.log(nameIs.charAt(++i)); //for even letters
+// }
+
+// for (let i = 1; i<=3; i++) {
+//     for (let j = 1; j <= 3; j++) {
+//         console.log("Rows", i , "Cols", j)
+//     }
+// }
+
+//Break and Continue statement
+// for (let i = 1; i <=10;i++) {
+//     console.log(i);
+//     if(i === 3) {
+//         console.log(i);
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// for (let j = 1; j <=10; j++){
+//     console.log(j)
+//     if(j ===5){
+//         console.log(j)
+//         continue;
+//     }
+//     console.log(j)
+// }
+// console.log()
+
+let rows = 6;
+for (let i = 1; i <= rows; i++) {
+  let pattern = "";
+  for (let j = 1; j <= i; j++) {
+    pattern += `*`;
+  }
+  console.log(pattern);
+}
