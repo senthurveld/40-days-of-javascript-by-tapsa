@@ -19,26 +19,27 @@
 // Max(-1,-5);
 
 // Function to Check if a String is a Palindrome
-function isPalindrome(str) {
-
-} 
+// let base = null;
+// function Palindrome(str){
+//     if(str ) return str;
+// }
+// console.log(Palindrome('senthur'))
 
 // Write a Function to Find Factorial of a Number
-// let n ;
-// function factorial(n) {
-//     for(let i = n; i <= n; i--){
-//         if(i === 0) {
-//             return i - 1;
-//         }
-//         console.log(i)
-//         let sum = i * n;
-//         console.log(i.charAt())
-//     }
-//     return n*i;
+
+// let n;
+// function fact(n) {
+//     if(n===1) return 1;
+//     return n * fact(n -1);
 // }
-// factorial(5)
+// console.log(fact(5))
 
-
+// let n;
+// function double(n) {
+//     if(n===1) return 1;
+//     return n * 2 ;
+// }
+// console.log(double(43))
 
 // Use an IIFE to Print “Hello, JavaScript!”
 // (function (lang) {

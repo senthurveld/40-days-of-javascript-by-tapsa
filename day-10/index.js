@@ -47,43 +47,60 @@ toDo();
 
 // Scope Chain
 
-let globalVar = "I am a Global Variable";
+// let globalVar = "I am a Global Variable";
 
-function outer() {
-    let outerVar = "I am an Outer Variable";
+// function outer() {
+//     let outerVar = "I am an Outer Variable";
 
-    function inner() {
-        let innerVar = "I am an Inner Variable";
+//     function inner() {
+//         let innerVar = "I am an Inner Variable";
 
-        console.log(innerVar); // "I am an Inner Variable"
-        console.log(outerVar); // "I am an Outer Variable"
-        console.log(globalVar); // "I am a Global Variable"
+//         console.log(innerVar); // "I am an Inner Variable"
+//         console.log(outerVar); // "I am an Outer Variable"
+//         console.log(globalVar); // "I am a Global Variable"
+//     }
+
+//     inner();
+// }
+
+// outer();
+
+// console.log(outerVar); // Reference Error
+
+// scope chain 2
+let num = 10;
+function one() {
+    let num = 20;
+    console.log(num);
+    function two(){
+        let num = 30;
+        console.log(num)
+        three();
+    }function three() {
+        console.log(num)
     }
-
-    inner();
+    console.log(num)
+    two();
 }
-
-outer();
-
-console.log(outerVar); // Reference Error
+one()
+console.log(num)
 
 
+// var count = 10;
 
-var count = 10;
+// function outer() {
+//     // var count = 20;
 
-function outer() {
-    // var count = 20;
+//     function inner() {
+//         //var count = 30;
+//         console.log(count); // 10
+//     }
+//     inner();
+//     console.log(count); // 10
+// }
 
-    function inner() {
-        //var count = 30;
-        console.log(count); // 10
-    }
-    inner();
-    console.log(count); // 10
-}
-
-outer();
-console.log(count); // 10
+// outer();
+// console.log(count); // 10
 
 
 // Variable Shadowing

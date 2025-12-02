@@ -291,7 +291,82 @@ Operators
 // say = "Love u ";
 // console.log(greets("Samantha"));
 
-
 // Arrow Function
 
-  
+// SCope CLass Tasks
+
+// function outer() {
+//     function inner() {
+//         console.log(user);  //Bob - because it's from nearest scope
+//     }
+//     let user = "Bob";
+//     inner();
+// }
+// outer();
+
+// let total = 0; // Global, bad practice
+// function add(num) {
+//     total += num;
+// }
+
+// add(5);
+// add(10);
+// console.log(total);
+
+// function scope() {
+//     console.log(i)
+//     two();
+// }
+// function two() {
+//     let i = 20;
+//     console.log(i)
+// }
+// scope();
+
+// function showAge() {
+//   let age = 25;
+//   console.log(age);
+// }
+
+// console.log(age);
+
+// let message = "Hello";
+
+// function outer() {
+//   let message = "Hi";
+
+//   function inner() {
+//     console.log(message);
+//   }
+
+//   inner();
+// }
+
+// outer();
+
+// let x = "Global";
+
+// function outer() {
+//   let x = "Outer";
+
+//   function inner() {
+//     let x = "Inner";
+//     console.log(x);
+//   }
+
+//   inner();
+// }
+
+// outer();
+
+function counter() {
+  let count = 0;
+  return function () {
+    count--;
+    console.log(count);
+  };
+}
+
+const reduce = counter();
+reduce();
+reduce();
