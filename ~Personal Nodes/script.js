@@ -22,113 +22,113 @@ Operators
 
 // Arithmetic Operator
 
-let a = 10;
-let b = 20;
+// let a = 10;
+// let b = 20;
 
-console.log(a + b);
-console.log(a - b);
-console.log(b - a);
-console.log(a * b);
-console.log(a / b);
-console.log(b % a);
-console.log(a ** b);
-console.log(a++);
-console.log(a);
-console.log(++a);
-console.log(b--);
-console.log(--b);
+// console.log(a + b);
+// console.log(a - b);
+// console.log(b - a);
+// console.log(a * b);
+// console.log(a / b);
+// console.log(b % a);
+// console.log(a ** b);
+// console.log(a++);
+// console.log(a);
+// console.log(++a);
+// console.log(b--);
+// console.log(--b);
 
-console.log((a += 3));
-console.log((a -= 5));
-console.log((a *= 2));
-console.log((a /= 2));
-console.log((a %= 4));
+// console.log((a += 3));
+// console.log((a -= 5));
+// console.log((a *= 2));
+// console.log((a /= 2));
+// console.log((a %= 4));
 // const x = 5;
 // x = x - 3;
 
 // -Comparison Operator
 
-console.log(0 == null);
-console.log(0 == undefined);
-console.log(0 == "0");
-console.log(22 == "22");
-console.log(2 == "two");
-console.log(2 != "2");
-console.log(2 != "two");
-console.log(null === null);
-console.log(undefined === undefined);
-console.log(2 === "2");
+// console.log(0 == null);
+// console.log(0 == undefined);
+// console.log(0 == "0");
+// console.log(22 == "22");
+// console.log(2 == "two");
+// console.log(2 != "2");
+// console.log(2 != "two");
+// console.log(null === null);
+// console.log(undefined === undefined);
+// console.log(2 === "2");
 
-let obj1 = { name: "senthur" };
-let obj2 = { name: "senthur" };
-console.log(obj1 == obj2);
-console.log(obj1 === obj2);
+// let obj1 = { name: "senthur" };
+// let obj2 = { name: "senthur" };
+// console.log(obj1 == obj2);
+// console.log(obj1 === obj2);
 
-console.log(2 > 3);
-console.log(4 > 2);
-console.log(2 >= 2);
-console.log(2 < 2);
-console.log(2 < 4);
-console.log(2 <= 2);
-console.log(2 >= "2");
-console.log(4 < `8`);
-console.log(0 > null);
-console.log(null > 0);
+// console.log(2 > 3);
+// console.log(4 > 2);
+// console.log(2 >= 2);
+// console.log(2 < 2);
+// console.log(2 < 4);
+// console.log(2 <= 2);
+// console.log(2 >= "2");
+// console.log(4 < `8`);
+// console.log(0 > null);
+// console.log(null > 0);
 
-console.log("Senthur" > "senthur");
-console.log("Senthur" < "senthur");
-console.log("Senthurvel" > "senthur");
-console.log("senthurvel" > "senthur");
-console.log("cat" < "CAT");
-console.log("cat" > "CAT");
-console.log("cat" >= "cat");
-console.log("CAT" === "CAT");
+// console.log("Senthur" > "senthur");
+// console.log("Senthur" < "senthur");
+// console.log("Senthurvel" > "senthur");
+// console.log("senthurvel" > "senthur");
+// console.log("cat" < "CAT");
+// console.log("cat" > "CAT");
+// console.log("cat" >= "cat");
+// console.log("CAT" === "CAT");
 
 /* -Logical Operator
     &&  - || - ?? -  ! 
 */
 
-console.log(false && false);
-console.log(true && false);
-console.log(true && true);
-console.log(false && true);
-console.log("Cow" && "Cat");
-console.log(0 && "Dog");
-console.log(0 && -1);
-console.log(-2 && -1);
-console.log(2 > 4 && 2 === 2);
+// console.log(false && false);
+// console.log(true && false);
+// console.log(true && true);
+// console.log(false && true);
+// console.log("Cow" && "Cat");
+// console.log(0 && "Dog");
+// console.log(0 && -1);
+// console.log(-2 && -1);
+// console.log(2 > 4 && 2 === 2);
 
-console.log(false || false);
-console.log(true || false);
-console.log(true || true);
-console.log(false || true);
-console.log("Cow" || "Cat");
-console.log("Cow" || "2");
-console.log(2 || 4);
-console.log(0 && -1);
-console.log(-3 && -1);
-console.log(0 && -1);
-console.log(1 || -1);
+// console.log(false || false);
+// console.log(true || false);
+// console.log(true || true);
+// console.log(false || true);
+// console.log("Cow" || "Cat");
+// console.log("Cow" || "2");
+// console.log(2 || 4);
+// console.log(0 && -1);
+// console.log(-3 && -1);
+// console.log(0 && -1);
+// console.log(1 || -1);
 
-console.log(!true);
-console.log(!false);
-console.log(2 != 2);
+// console.log(!true);
+// console.log(!false);
+// console.log(2 != 2);
 
 // Nullish coalescing operator (??)
 //  -is First Operant is null or underfined print 2nd operant.
 
-console.log(null ?? 2);
-console.log(null ?? null);
-console.log(undefined ?? 2);
-console.log(false ?? true);
-console.log(0 ?? 2);
-console.log(-1 ?? 2);
-console.log("cat" ?? null);
+// console.log(null ?? 2);
+// console.log(null ?? null);
+// console.log(undefined ?? 2);
+// console.log(false ?? true);
+// console.log(0 ?? 2);
+// console.log(-1 ?? 2);
+// console.log("cat" ?? null);
 
 // Ternary Operator
 
-let age = 32;
-console.log(age >= 60 ? "Senior Citizen" : "Non Senior Citizen");
+// let age = 32;
+// console.log(age >= 60 ? "Senior Citizen" : "Non Senior Citizen");
 
 // BitWise Operators
 // 10 in decimal
@@ -194,11 +194,104 @@ console.log(age >= 60 ? "Senior Citizen" : "Non Senior Citizen");
 // }
 // console.log()
 
-let rows = 6;
-for (let i = 1; i <= rows; i++) {
-  let pattern = "";
-  for (let j = 1; j <= i; j++) {
-    pattern += `*`;
-  }
-  console.log(pattern);
-}
+// let rows = 6;
+// for (let i = 1; i <= rows; i++) {
+//   let pattern = "";
+//   for (let j = 1; j <= i; j++) {
+//     pattern += `*`;
+//   }
+//   console.log(pattern);
+// }
+
+// Functions
+
+// function dothis(a, b) {
+//   sum = a+b;
+//   return sum;
+// }
+
+// let result = dothis(2,8)
+// console.log(result);
+// console.log(sum);
+// dothis(5,3);
+// dothis(25,3);
+// console.log(sum);
+
+// function multi(x){
+//   double = 2*x;
+//   return double;
+// }
+// multi(sum);
+// console.log(double);
+
+// Rest Parameter
+// function sumall(a, b, ...rest) {
+//   console.log(a,b,rest)
+// }
+// sumall(10,3,4,544,43)
+
+// Nested Functions
+// function outer() {
+//   console.log("Outer");
+//   return function inner() {
+//     console.log("Inner");
+//     function inner2() {
+//       console.log("Inner2");
+//     };
+//     inner2();
+//   };
+// }
+// outer();
+// let retFunc = outer();
+// console.log(retFunc(),inner2());
+
+// Callback functions
+// function foo(func) {
+//   console.log("foo");
+//   func();
+// }
+// const buz = function () {
+//   console.log("buz");
+//   let car = function () {
+//     console.log("hello");
+//     return car;
+//   };
+// };
+// let vari = car();
+// console.log(vari)
+// foo(buz);
+
+// let isAnswered = false;
+// function callHim(dail) {
+//   console.log("Im calling him");
+//   if (isAnswered) {
+//     dail();
+//   } else {
+//     console.log('But Not answered')
+//   }
+// }
+// let Answered = function () {
+//   console.log('Hello WhatsUp bro');
+// }
+// callHim(Answered);
+
+// Pure Function
+// function greet(name) {
+//   return "Hello " + name;
+// }
+// console.log(greet("Samantha"));
+// console.log(greet("Samantha"));
+
+// // Side effects func
+// let say = "Hello ";
+// function greets(name) {
+//   return say + name;
+// }
+// console.log(greets("Samantha"));
+// say = "Love u ";
+// console.log(greets("Samantha"));
+
+
+// Arrow Function
+
+  
