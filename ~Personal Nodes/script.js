@@ -359,14 +359,97 @@ Operators
 
 // outer();
 
-function counter() {
-  let count = 0;
-  return function () {
-    count--;
-    console.log(count);
-  };
-}
+// function counter() {
+//   let count = 0;
+//   return function () {
+//     count--;
+//     console.log(count);
+//   };
+// }
 
-const reduce = counter();
-reduce();
-reduce();
+// const reduce = counter();
+// reduce();
+// reduce();
+
+// function testClosure() {
+//     let x = 10;
+//     return function () {
+//         return x * x;
+//     };
+// }
+// console.log(testClosure()());
+
+// function clickMe() {
+//   let count = 0;
+
+//   document.getElementById("btn").addEventListener("click", () => {
+//     count++;
+//     console.log(`You Cilcked ${count} time(s)`);
+//   });
+// }
+// clickMe();
+
+// function createMultiplier(multiplier) {
+  
+//   return function multiply(){
+//      console.log(multiplier * 4 )
+//   }
+// }
+// createMultiplier();
+
+// function Factory(number) {
+//   let count = number;
+
+//   return {
+//     "increment" : () => {
+//       count++;
+//       console.log(count);
+//     },
+//     "decrement" : () => {
+//       count--;
+//       console.log(count);
+//     },
+//     "reset" : () => {
+//       count = 0;
+//     }
+//   }
+// }
+// let action = Factory(8);
+// action.decrement();
+// action.decrement();
+// action.decrement();
+// action.increment();
+// action.increment();
+// action.increment();
+// action.increment();
+// action.decrement();
+// action.reset()
+// action.decrement();
+
+
+// function outer() {
+//   let count =0;
+  
+//   function inner() {
+//     count++;
+//     console.log(count);
+//   }
+//   inner()
+//   inner()
+// }
+// outer();
+
+function outer() {
+  let count =0;
+  
+  return function inner() {
+    count++;
+    console.log(count);
+  }
+}
+let plus = outer();
+plus();
+plus();
+plus();
+plus();
+plus();

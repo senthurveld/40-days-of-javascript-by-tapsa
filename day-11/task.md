@@ -13,8 +13,10 @@ function outer() {
     };
 }
 const counter = outer();
-counter();
-counter();
+counter(); // 1
+counter(); // 2
+// Every time counter() executes runs inner() as return value and make count increse.
+// log the count and value stored on memory and next time count and to be initialized then increse count from its' previous value stored in memory
 ```
 
 ## 2. What will be the output and why?
@@ -25,17 +27,63 @@ function testClosure() {
         return x * x;
     };
 }
-console.log(testClosure()());
+console.log(testClosure()());  // 100
+// Same answer from above but this time return function is not stored as variable instead of anonymous func . so testClosure() & () excute it prints value and get from closure.
 ```
 
 ## 3. Create a button dynamically and attach a click event handler using a closure. The handler should count and log how many times the button was clicked.
+
+```js
+function clickMe() {
+  let count = 0;
+
+  document.getElementById("btn").addEventListener("click", () => {
+    count++;
+    console.log(`You Cilcked ${count} time(s)`);
+  });
+}
+clickMe();
+```
 
 ## 4. Write a function `createMultiplier(multiplier)` that returns another function to multiply numbers.
 
 ## 5. What happens if a closure references an object?
 - 1) The object is garbage collected immediately
-- 2) The object remains in memory as long as the closure exists
+- 2) The object remains in memory as long as the closure exists  
 - 3) The object is automatically cloned
 - 4) None of the Above.
 
+// Ansewr : - 2. The object remains in memory as long as the closure exists 
+
 ## 6. Write a function factory of counter to increment, decrement, and reset a counter. Use closure to refer the count value across the functuions.
+
+```js 
+function Factory(number) {
+  let count = number;
+
+  return {
+    "increment" : () => {
+      count++;
+      console.log(count);
+    },
+    "decrement" : () => {
+      count--;
+      console.log(count);
+    },
+    "reset" : () => {
+      count = 0;
+    }
+  }
+}
+let action = Factory(8);
+action.decrement();
+action.decrement();
+action.decrement();
+action.increment();
+action.increment();
+action.increment();
+action.increment();
+action.decrement();
+action.reset()
+action.decrement();
+```
