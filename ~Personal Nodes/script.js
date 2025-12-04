@@ -439,17 +439,48 @@ Operators
 // }
 // outer();
 
-function outer() {
-  let count =0;
+// function outer() {
+//   let count =0;
   
-  return function inner() {
-    count++;
-    console.log(count);
-  }
-}
-let plus = outer();
-plus();
-plus();
-plus();
-plus();
-plus();
+//   return function inner() {
+//     count++;
+//     console.log(count);
+//   }
+// }
+// let plus = outer();
+// plus();
+// plus();
+// plus();
+// plus();
+// plus();
+
+// let car = prompt('enter your fav car', '');
+// let count = prompt('enter how many cars', '')
+
+// let favCars = {
+//   [car] : 4
+// }
+// console.log(favCars)
+// console.log(favCars["car"])
+
+
+//Objects
+// let person = {
+//   name : "senthur",
+//   age : 20
+// }
+
+// person.isEmployee = true
+// person["have Gf"] = false
+
+// console.log(person);
+
+// delete person["have Gf"];
+// delete person.isEmployee;
+
+// console.log(person);
+
+// Constructor Function
+
+
+// Object Destructuring    
