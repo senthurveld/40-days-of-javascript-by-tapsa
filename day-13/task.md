@@ -94,6 +94,7 @@ const kabadi = new Sports("kabadi", 7)
 console.log(circket)
 console.log(kabadi)
 
+console.log(circket instanceof Sports);
 ```
 
 ## 6. Can you attach the car1's `describe()` method to car2 object? Give all possible solutions that you can think of
@@ -111,6 +112,7 @@ const car2 = {
   brand: "BMW",
   model: "X1",
 };
+
 
 // Answers
 

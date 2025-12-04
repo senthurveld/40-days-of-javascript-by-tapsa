@@ -1,5 +1,3 @@
-
-
 // implicit binding
 /* In method -this- keyword used in object 
 then its point value to object keys */
@@ -110,8 +108,8 @@ then its point value to object keys */
 //     this.players = players;
 // }
 
-// const circket = new Sports("circket", 11) 
-// const kabadi = new Sports("kabadi", 7) 
+// const circket = new Sports("circket", 11)
+// const kabadi = new Sports("kabadi", 7)
 
 // console.log(circket)
 // console.log(kabadi)
@@ -148,3 +146,51 @@ then its point value to object keys */
 
 // person.sayHello();
 // person.sayHelloArrow();
+
+// let cars = {
+//   name : "Audi",
+//   model : "we3",
+//   showCase: function () {
+//     console.log(`${this.name} model is ${this.model}`);
+//   },
+// };
+
+// const bmw = {
+//     name : "BWM",
+//     model:"cw4"
+// }
+// const bmw2 = function (name, model) {
+//     name,
+//     model
+// }
+
+// console.log(bmw instanceof cars)
+// // cars.showCase.call(bmw)
+// cars.showCase.apply(bmw2, "bmw", "eds" )
+
+// const car1 = {
+//   brand: "Audi",
+//   model: "A8",
+//   describe: function () {
+//     console.log(`This car is a ${this.brand} ${this.model}.`);
+//   },
+// };
+
+// const car2 = {
+//   brand: "BMW",
+//   model: "X1",
+// };
+// car1.describe.call(car2)
+
+// const Sports = function(name, players) {
+//     this.name = name;
+//     this.players = players;
+// }
+
+// const circket = new Sports("circket", 11) 
+// const kabadi = new Sports("kabadi", 7) 
+
+// console.log(circket)
+// console.log(kabadi)
+
+// console.log(kabadi instanceof Sports);
