@@ -76,3 +76,4 @@
 // console.log(person.name);
 
 // console.log(Object.hasOwn(newPerson, "name" ||  person, "name"));
+

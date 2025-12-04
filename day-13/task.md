@@ -8,7 +8,7 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 
 - At the Global
 - Inside an Object Method
-- Inside the Satandalone non-Arrow Function
+- Inside the Standalone non-Arrow Function
 - Inside an Arrow Function(standalone)
 - Inside an Arrow Function(as object method)
 - Inside an object created with the Constructor Function
@@ -24,8 +24,19 @@ const user = {
     console.log(`Hello, ${this.name}!`);
   },
 };
-
 user.greet();
+
+// Answer
+const user = {
+  name: "tapaScript",
+  greet: function () {
+    return () => {
+      console.log(`Hello, ${this.name}!`);
+    };
+  },
+};
+let func = user.greet();
+func();
 ```
 
 ## 3. Can you explain what is the problem here and fix the issue to log the correct name?
@@ -40,6 +51,17 @@ const obj = {
 
 const greetFn = obj.greet;
 greetFn();
+
+// answer
+
+const obj = {
+  name: "Tom",
+  greet: function () {
+     console.log(`Hello, ${this.name}!`);
+  },
+};
+
+obj.greet();
 ```
 
 ## 4. What is the problem with the following code? Why isn't it logging the name correctly?
@@ -48,7 +70,7 @@ greetFn();
 const user = {
   name: "Alex",
   greet: function () {
-    function inner() {
+     function inner() {
       console.log(`Hello, ${this.name}!`);
     }
     inner();
@@ -59,6 +81,20 @@ user.greet();
 ```
 
 ## 5. Create a `Sports` constructor function that takes `name` and `number of players` as arguments and assigns them using `this` keyword. Then, create two sports instances and log their details
+
+```js
+const Sports = function(name, players) {
+    this.name = name;
+    this.players = players;
+}
+
+const circket = new Sports("circket", 11) 
+const kabadi = new Sports("kabadi", 7) 
+
+console.log(circket)
+console.log(kabadi)
+
+```
 
 ## 6. Can you attach the car1's `describe()` method to car2 object? Give all possible solutions that you can think of
 
@@ -75,6 +111,15 @@ const car2 = {
   brand: "BMW",
   model: "X1",
 };
+
+// Answers
+
+car1.describe.call(car2)
+
+car1.describe.apply(car2)
+
+const newfunc = car1.describe.bind(car2)
+newfunc()
 ```
 
 ## 7. What will be the output of the following code and why?
@@ -90,8 +135,11 @@ const person = {
   },
 };
 
-person.sayHello();
-person.sayHelloArrow();
+person.sayHello();  // Charlie
+person.sayHelloArrow(); //undefined or windows
+
+// - B: "Charlie" and undefined
+
 ```
 
 Options are:
