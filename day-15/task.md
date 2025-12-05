@@ -8,18 +8,161 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 
 > Please Note: These tasks are for your practice. If you are stuck, go back to the videos and get the clarifications. If you are still stuck, feel free to start a conversation on [tapaScript Discord](https://discord.gg/HHwdF8r28m).
 
+```js
+
+```
+
 - [ ] **T-001**: Create an array of 5 elements using the Array Constructor.
+
+```js
+const salad = new Array("banana", "apple", "orange", "grapes", "mango");
+console.log(salad);
+console.log(salad.length);
+```
+
 - [ ] **T-002**: Create an array of 3 empty slots.
-- [ ] **T-003**: Create an array of 6 elements using the Array literals and access the fourth element in the array using its `length` property.
+
+```js
+const emptyArray = [3];
+```
+
+- [ ] **T-003**: Create an array of 6 elements using the
+      Array literals and access the fourth element in the array using its `length` property.
+
+```js
+const salad = new Array("banana", "apple", "orange", "grapes", "mango", "guva");
+console.log(salad);
+console.log(salad.length[4]);
+```
+
 - [ ] **T-004**: Use the `for` loop on the above array to print elements in the odd index.
+
+```js
+const salad = new Array("banana", "apple", "orange", "grapes", "mango", "guva");
+console.log(salad);
+for (let i = 0; i <= salad.length - 1; i++) {
+  if (i % 2 === 0) {
+    console.log(salad[i]);
+  }
+}
+```
+
 - [ ] **T-005**: Add one element at the front and the end of an array.
+
+```js
+const salad = new Array("banana", "apple", "orange", "grapes", "mango");
+salad.unshift("onion");
+console.log(salad);
+```
+
 - [ ] **T-006**: Remove an element from the front and the end of an array.
+
+```js
+const salad = new Array("banana", "apple", "orange", "grapes", "mango");
+salad.pop();
+salad.shift();
+console.log(salad);
+```
+
 - [ ] **T-007**: Create an array containing the name of your favourite foods(10 foods). Destructure the 6th food element from the array using destructuring.
+
+```js
+const favFoods = [
+  "banana",
+  "apple",
+  "orange",
+  "grapes",
+  "mango",
+  "parota",
+  "chicken",
+  "eggs",
+  "beef",
+];
+console.log(favFoods.length);
+let [, , , , sixthFood, , , ,] = [...favFoods];
+console.log(sixthFood);
+```
+
 - [ ] **T-008**: Take out the last 8 food items from the above array using the Array destructuring. Hint: rest parameter.
+
+```js
+const favFoods = [
+  "banana",
+  "apple",
+  "orange",
+  "grapes",
+  "mango",
+  "parota",
+  "chicken",
+  "eggs",
+  "beef",
+];
+console.log(favFoods.length);
+let [, , ...lastFoods] = [...favFoods];
+console.log(lastFoods);
+```
+
 - [ ] **T-009**: Clone an Array(Shallow cloning)
+
+```js
+const favFoods = [
+  "banana",
+  "apple",
+  "orange",
+  "grapes",
+  "mango",
+  "parota",
+  "chicken",
+  "eggs",
+  "beef",
+];
+
+const cloneFoods = favFoods.slice();
+console.log(cloneFoods);
+
+const cloneFoods2 = [...favFoods];
+console.log(cloneFoods2);
+```
+
 - [ ] **T-010**: Empty an array using its length property
+
+```js
+let favFoods = [
+  "banana",
+  "apple",
+  "orange",
+  "grapes",
+  "mango",
+  "parota",
+  "chicken",
+  "eggs",
+  "beef",
+];
+console.log(favFoods.length);
+favFoods.length = 0;
+console.log(favFoods.length);
+console.log(favFoods);
+```
+
 - [ ] **T-011**: Create an array of 10 elements(number 1 to 10). Resize the array to length 6 once you find the number 5 in that array. Hint: Use `for-loop`.
+
+```js
+let favFoods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(favFoods.length);
+
+for (let i = 0; i <= favFoods.length - 1; i++) {
+  if (i === favFoods[5]) {
+    favFoods.length = i;
+    console.log(favFoods);
+  }
+}
+console.log(favFoods.length);
+```
+
 - [ ] **T-012**: Create an Array of 10 elements. Use the `splice()` method to empty the array.
+
+
+
 - [ ] **T-013**: Create an Array of 10 elements. You can empty the array in multiple ways: using the `length` property, using the `pop()` method, using the `shift()` method, setting the array with `[]`, or the `splice()` method. Which among these methods are most efficient and why?
 - [ ] **T-014**: What happens when you concatenate two empty arrays?
 - [ ] **T-015**: How can you check if a value is partially matching with any of the elements of an Array?
@@ -80,7 +223,7 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 - [ ] **T-039**: Find the total salary of all employees working in the "Engineering" department.
 - [ ] **T-040**: Check if there is any department where all employees earn more than 5000.
 - [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).
-Find the total number of unique projects being handled across all employees.
+      Find the total number of unique projects being handled across all employees.
 - [ ] **T-042**: For each employee, find their department name and return an array of employee names with their department names.
 - [ ] **T-043**: Get a list of names of employees earning more than 6000.
 - [ ] **T-044**: Write a for-of loop to print the names of all employees from the employees array.
@@ -119,9 +262,9 @@ Find the total number of unique projects being handled across all employees.
 
 ```js
 const users = [
-  { name: 'Alice', age: 55 },
-  { name: 'Bob', age: 3 },
-  { name: 'Charlie', age: 25 },
+  { name: "Alice", age: 55 },
+  { name: "Bob", age: 3 },
+  { name: "Charlie", age: 25 },
 ];
 ```
 

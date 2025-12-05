@@ -627,12 +627,68 @@ Operators
 // }
 
 // try {
-//     let error1 = checkAPI("htstpsfg") 
+//     let error1 = checkAPI("htstpsfg")
 //     console.log(error1);
-    
+
 // } catch (error) {
 //     console.error(`${error.name}: ${error.message}`)
 //     console.error(error)
 // }
 
+// Explicit Binding bind(), call(), apply()
+// const likes = function(hobby1, hobby2) {
+//     console.info(this.name + ' likes ' + hobby1 + ' , ' + hobby2);
+// }
+// const person = {
+//     name: "Tapas"
+// }
+// likes.call(person, "Sleeping", "Eating")
 
+// const hobbiesToApply = ["Sleeping", "Eating"];
+// likes.apply(person, hobbiesToApply)
+
+// const newFn = likes.bind(person);
+// newFn("eat", "sleep")
+
+// check variable types
+// let obj = {
+//   var1: {},
+//   var2: [],
+//   var3() {},
+//   var5: 3,
+// };
+// let arr = [(var1 = {}), (var2 = []), function var3() {}, (var5 = 3)];
+// var1 = {};
+// var2 = [];
+// function var3() {}
+// var5 = 3;
+
+// console.log(typeof var1);
+// console.log(typeof var2);
+// console.log(typeof var3);
+// console.log(typeof var5);
+
+// for (let key in obj) {
+//   console.log(typeof key);
+// }
+
+// for (let key in arr) {
+//       console.log(typeof key);
+// }
+
+// const salad = ['b', 's', 'e', 'd'];
+// console.log(Array.isArray(salad));
+// console.log(Array.isArray([
+//     {
+//         name: 'senthur'
+//     }
+// ]));
+
+const salad = ['apple','orange', 'oleve', 'carrat'];
+
+// let clone = salad.slice()
+// console.log(clone === salad);
+
+// let newcolne = [...salad]
+// console.log(clone === newcolne);
+// console.log(newcolne.values === salad.values);

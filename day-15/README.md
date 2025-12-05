@@ -60,7 +60,7 @@
   - ✅ Immutability
     - ✅ The toReversed() method
     - ✅ The toSorted() method
-    - ✅ The toSpliced() method
+    - [x] The toSpliced() method
     - ✅ The with() method
 - ✅ Tasks and Quizzes With Interview Questions
 
