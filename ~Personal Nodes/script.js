@@ -390,7 +390,7 @@ Operators
 // clickMe();
 
 // function createMultiplier(multiplier) {
-  
+
 //   return function multiply(){
 //      console.log(multiplier * 4 )
 //   }
@@ -426,10 +426,9 @@ Operators
 // action.reset()
 // action.decrement();
 
-
 // function outer() {
 //   let count =0;
-  
+
 //   function inner() {
 //     count++;
 //     console.log(count);
@@ -441,7 +440,7 @@ Operators
 
 // function outer() {
 //   let count =0;
-  
+
 //   return function inner() {
 //     count++;
 //     console.log(count);
@@ -463,7 +462,6 @@ Operators
 // console.log(favCars)
 // console.log(favCars["car"])
 
-
 //Objects
 // let person = {
 //   name : "senthur",
@@ -477,10 +475,164 @@ Operators
 
 // delete person["have Gf"];
 // delete person.isEmployee;
-
 // console.log(person);
 
 // Constructor Function
+// Object Destructuring
+
+//Error handling
+
+// function divide(a,b) {
+//     try {
+//         if(b===0) {
+//             const err = new Error("Divison by zero not allowed");
+//             throw err;
+//         }
+//         const divide = a/b;
+//         console.log(divide);
+//     } catch (error) {
+//         console.info(error)
+//         console.error("somthinfd", error.message)
+//     }
+// }
+// divide(4,4);
+// divide(45,0)
+
+// const person = {
+//   name: "senthur",
+//   address: {
+//     city: "hh",
+//   },
+// };
+
+// function getPostableCode(obj) {
+//   try {
+//     if (undefined) {
+//       throw new Error("Accesing undefined");
+//     }
+//     console.log(person.address.city);
+//     console.log(person.address.zip.num);
+//   } catch (error) {
+//     console.log(error.name);
+//     console.log(error);
+//   }
+// }
+// getPostableCode(person);
+
+// try {
+//     let r = p + 50;
+//     console.log(r);
+// } catch (error) {
+//     console.log("An error occurred:", error.name);
+// }
+
+// function processPayment(amount) {
+//     try {
+//         if(amount <= 0 ){
+//             throw new Error("Amount is Invaild:");
+//         }
+//         return console.log(`${amount} is processed`)
+//     } catch (error) {
+//         console.error("Error:", error.message);
+//     }
+// }
+
+// processPayment(-1);
+
+// /3. Implement a custom error handling system for an e-commerce website that categorizes errors as
+
+// function UserError(message) {
+//   this.name = "UserError";
+//   this.message = message;
+// }
+
+// function userValidation(name) {
+//   if (name === "" || name === undefined) {
+//     throw new UserError(`Name must be entered: You entered : ${name}`);
+//   }
+//   return `User name is ${name}`;
+// }
+// try {
+//   const message = userValidation("s");
+//   console.log(message);
+// } catch (error) {
+//   console.log(`${error.name}:${error.message} `);
+// }
+
+// function PaymentError(message) {
+//   this.name = "PaymentError";
+//   this.message = message;
+// }
+
+// function paymentWithTax(amount) {
+//   if (amount > 200) {
+//     let tax = amount + 20;
+//     throw new PaymentError(`Paying with Taxes:${amount} + 20 : ${tax}`);
+//   }
+//   return `Paying ${amount}`
+// }
+
+// try {
+//   const message = paymentWithTax(555);
+//   console.log(message);
+// } catch (error) {
+//       console.error(`${error.name}:${error.message} `);
+// }
+
+// function ServerError(message) {
+//     this.name = "ServerError";
+//     this.message = message
+// }
+
+// function checkServerIsOn(server) {
+//     if(server === "" || !server === NaN) {
+//         throw new ServerError("Enter vaild server name")
+//     }
+//     return `Server doing fine`
+// }
+
+// try {
+//     const serverSwitch = checkServerIsOn("sdfr")
+//     console.log(serverSwitch, message)
+// } catch (error) {
+//       console.log(`${error.name}:${error.message} `);
+
+// }
+
+// function EmailVaild(message) {
+//     this.name = "EmailVaild";
+//     this.message = message
+// }
+
+// function checkMail(mail) {
+//     if(!mail.includes("@")) {
+//         throw new EmailVaild("Enter vaild mail id", `You typed ${mail}`)
+//     }
+//     return `${mail} mail is vaild`
+// }
+
+// try {
+//     const vaildMail = checkMail("bad@mail.com")
+//     console.log(vaildMail);
+// } catch (error) {
+//       console.log(`${error.name}:${error.message} `);
+// }
+
+// function checkAPI(url) {
+//   if (!url.startsWith("https")) {
+//     throw new Error("Invalid URL");
+//   }
+//   console.log("Api is loaded");
+//   return `API is safe to use`;
+// }
+
+// try {
+//     let error1 = checkAPI("htstpsfg") 
+//     console.log(error1);
+    
+// } catch (error) {
+//     console.error(`${error.name}: ${error.message}`)
+//     console.error(error)
+// }
 
 
-// Object Destructuring    

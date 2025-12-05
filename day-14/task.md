@@ -13,6 +13,8 @@ try {
 } catch (error) {
     console.log("An error occurred:", error.name);
 }
+
+// ReferenceError
 ```
 
 - ReferenceError
@@ -21,6 +23,21 @@ try {
 - No error, it prints 10
 
 ## 2. Write a function processPayment(amount) that checks if the amount is positive and not exceeding balance. If any condition fails, throw appropriate errors
+```js
+function processPayment(amount) {
+    try {
+        if(amount <= 0 ){
+            throw new Error("Amount is Invaild:");
+        }
+        return console.log(`${amount} is processed`)
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+processPayment(-1)
+processPayment(10)
+```
 
 ## 3. Implement a custom error handling system for an e-commerce website that categorizes errors as
 
@@ -29,11 +46,112 @@ try {
 - ServerError
 - EmailError
 
+```js
+// UserError
+function UserError(message) {
+  this.name = "UserError";
+  this.message = message;
+}
+
+function userValidation(name) {
+  if (name === "" || name === undefined) {
+    throw new UserError(`Name must be entered: You entered : ${name}`);
+  }
+  return `User name is ${name}`;
+}
+try {
+  const message = userValidation("s");
+  console.log(message);
+} catch (error) {
+  console.log(`${error.name}:${error.message} `);
+}
+
+// - PaymentError
+function PaymentError(message) {
+  this.name = "PaymentError";
+  this.message = message;
+}
+
+function paymentWithTax(amount) {
+  if (amount > 200) {
+    let tax = amount + 20;
+    throw new PaymentError(`Paying with Taxes:${amount} + 20 : ${tax}`);
+  }
+  return `Paying ${amount}`
+}
+
+try {
+  const message = paymentWithTax(555);
+  console.log(message);
+} catch (error) {
+      console.error(`${error.name}:${error.message} `);
+}
+
+// - ServerError
+function ServerError(message) {
+    this.name = "ServerError";
+    this.message = message
+} 
+
+function checkServerIsOn(server) {
+    if(server === "" || !server === NaN) {
+        throw new ServerError("Enter vaild server name")
+    }
+    return `Server doing fine`
+}
+
+try {
+    const serverSwitch = checkServerIsOn("sdfr")
+    console.log(serverSwitch, message)
+} catch (error) {
+      console.log(`${error.name}:${error.message} `);
+
+}
+// - EmailError
+function EmailVaild(message) {
+    this.name = "EmailVaild";
+    this.message = message
+} 
+
+function checkMail(mail) {
+    if(!mail.includes("@")) {
+        throw new EmailVaild("Enter vaild mail id", `You typed ${mail}`)
+    }
+    return `${mail} mail is vaild`
+}
+
+try {
+    const vaildMail = checkMail("bad@mail.com")
+    console.log(vaildMail);
+} catch (error) {
+      console.log(`${error.name}:${error.message} `);
+}
+```
+
 ## 4. Simulate an API call function fetchData(url). If the URL does not start with "https", throw an "Invalid URL" error. Handle it using try...catch
+```js
+function checkAPI(url) {
+  if (!url.startsWith("https")) {
+    throw new Error("Invalid URL");
+  }
+  console.log("Api is loaded");
+  return `API is safe to use`;
+}
+
+try {
+    let error1 = checkAPI("htstpsfg") 
+    console.log(error1);
+    
+} catch (error) {
+    console.error(`${error.name}: ${error.message}`)
+    console.error(error)
+}
+
+```
 
 ## 5. Implement a custom error type ValidationError using constructor functions to handle form validation errors
 
-Example:
+<!-- Example: -->
 
 ```js
 const userInput = { username: "", age: -2 };
@@ -54,14 +172,15 @@ Please note, you do not have to implement the actual IO operation here. Just use
 
 - It catches an error
 - It stops the execution of a program
-- It creates a new error manually
+ ===> - It creates a new error manually
 - It prints an error message
 
 ## 9. What does the finally block do in a try...catch statement?
 
 - Runs only if an error occurs
 - Runs only if no error occurs
-- Runs regardless of whether an error occurs or not
+  ===> - Runs regardless of whether an error occurs or not 
 - Stops the execution of the script
 
 ## 10. Create a table exaplaining the usages of try, catch, throw, rethrow, error object
+
