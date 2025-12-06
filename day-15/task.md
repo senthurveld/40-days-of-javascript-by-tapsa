@@ -161,15 +161,81 @@ console.log(favFoods.length);
 
 - [ ] **T-012**: Create an Array of 10 elements. Use the `splice()` method to empty the array.
 
+```js
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
+let newNums = nums.slice(0, 0);
+console.log(nums.slice(0, 0));
+console.log(newNums);
+console.log(nums);
+```
 
 - [ ] **T-013**: Create an Array of 10 elements. You can empty the array in multiple ways: using the `length` property, using the `pop()` method, using the `shift()` method, setting the array with `[]`, or the `splice()` method. Which among these methods are most efficient and why?
+
+```js
+//setting array [] is very efficient , less code;
+//other all methods needs more code or conditions
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+nums = [];
+console.log(nums);
+```
+
 - [ ] **T-014**: What happens when you concatenate two empty arrays?
+
+<!--
+Concat used to merge two arrays with default comma , separate.
+But when use it on empty array is became empty array []
+ -->
+
 - [ ] **T-015**: How can you check if a value is partially matching with any of the elements of an Array?
+
+```js
+// done includes method
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+console.log(nums.includes(3));
+console.log(nums.includes("d"));
+
+// And it's case sensitive
+```
+
 - [ ] **T-016**: What is the difference between the slice() and splice() methods?
+
+```js
+let nums = [1, 2, 3, 4, 5];
+
+let nums = [1, 2, 3, 4, 5];
+
+let slice = nums.slice();
+console.log(slice);
+
+let splice = slice.splice(0, 2, "one", "two");
+console.log(slice);
+
+// slice() - make clone of an array
+// splice() - take index value and deletecount from that and add/remove/replace vaules to tha array
+```
+
 - [ ] **T-017**: Create an Array of alphanumeric strings. Sort the elements in both ascending and descending orders. You must be doing this in an immutable way such that the source array never gets modified.
+
+```js
+let characters = ["rajan", "anbu", "guna", "velu", "chandara", "senthil"];
+
+let asc = characters.toSorted();
+console.log(asc);
+
+let desc = characters.toSorted((a, b) => {
+  return a === b ? 0 : a > b ? -1 : 1;
+});
+console.log(desc);
+```
+
 - [ ] **T-018**: Can you give examples of sparse and dense arrays?
+
+
 - [ ] **T-019**: Give a practical usages of the .fill() method
+
 - [ ] **T-020**: How to convert an array to a string?
 
 > Consider these input arrays for question **T-21** to **T-48**

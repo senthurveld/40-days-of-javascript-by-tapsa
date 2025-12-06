@@ -684,7 +684,7 @@ Operators
 //     }
 // ]));
 
-const salad = ['apple','orange', 'oleve', 'carrat'];
+// const salad = ['apple','orange', 'oleve', 'carrat'];
 
 // let clone = salad.slice()
 // console.log(clone === salad);
@@ -692,3 +692,50 @@ const salad = ['apple','orange', 'oleve', 'carrat'];
 // let newcolne = [...salad]
 // console.log(clone === newcolne);
 // console.log(newcolne.values === salad.values);
+
+// let emps = [
+//     {name : 'senthur', salary: 2000, dept: 'IT'},
+//     {name : 'dr', salary: 23000, dept: 'TAX'},
+//     {name : 'hidr', salary: 6000, dept: 'HR'},
+//     {name : 'asra', salary: 12000, dept: 'TAX'},
+//     {name : 'sam', salary: 5000, dept: 'IT'},
+// ];
+
+// const sort1 = Object.groupBy(emps, ({salary}) => {
+//     return salary >= 5000 ? "Above 5000" : "Less 5000"
+// });
+// console.log(sort1)
+
+// const getDep = Object.groupBy(emps, ({dept}) => dept)
+// console.log(getDep);
+
+// let nums = [1,2,3,4,5,6,7,8,9,0];
+
+// let newNums = nums.slice(0,0);
+// console.log(nums.slice(0,0));
+// console.log(newNums);
+// console.log(nums);
+
+// let nums = [1,2,3,4,5,6,7,8,9,0];
+
+// console.log(nums.includes(3));
+// console.log(nums.includes('d'));
+
+// let characters = ["rajan", "anbu", "guna", "velu", "chandara", "senthil"];
+
+// let asc = characters.toSorted()
+// console.log(asc);
+
+// let desc = characters.toSorted((a,b) => {
+//     return a === b ? 0 : a > b ? -1 : 1
+// });
+// console.log(desc);
+
+
+/*
+
+ ```js
+
+ ```
+
+ */
