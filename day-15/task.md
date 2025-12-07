@@ -184,7 +184,7 @@ console.log(nums);
 - [ ] **T-014**: What happens when you concatenate two empty arrays?
 
 <!--
-Concat used to merge two arrays with default comma , separate.
+Concat used to merge two arrays
 But when use it on empty array is became empty array []
  -->
 
@@ -233,12 +233,26 @@ console.log(desc);
 
 - [ ] **T-018**: Can you give examples of sparse and dense arrays?
 
-
 - [ ] **T-019**: Give a practical usages of the .fill() method
+
+```js
+let arr = ["tom", "jerry", "ds", "ef", "ef"];
+let newArr = arr.fill("running", 2, Infinity);
+console.log(newArr);
+```
 
 - [ ] **T-020**: How to convert an array to a string?
 
+```js
+let arr = ["tom", "jerry", "ds", "ef", "ef"];
+console.log(newArr.flat(5));
+```
+
 > Consider these input arrays for question **T-21** to **T-48**
+
+```js
+
+```
 
 - `employees array`: An array of emplyees working in a department.
 
@@ -269,40 +283,218 @@ console.log(desc);
   ```
 
 - [ ] **T-021**: Can you filter employees who work in the "Engineering" department?
+
+```js
+let Engineering = employees.filter((emp) => {
+  return emp.departmentId === 2;
+});
+console.log(Engineering);
+```
+
 - [ ] **T-022**: Create a new array that combines employee names and department names in the format: "Alice (HR)".
+
+```js
+let filterHr = employees.filter((emp) => {
+  if (emp.departmentId === 1) {
+    console.log(`${emp.name} (HR)`);
+  }
+});
+```
+
 - [ ] **T-023**: Find the highest salary among employees.
+
+```js
+let high = employees.reduce((max, emp) => {
+  return emp.salary > max.salary ? emp : max;
+});
+console.log(high);
+```
+
 - [ ] **T-024**: Check if there is at least one employee in the "Sales" department.
+
+```js
+const checkSalesPerson = employees.some((dept) => {
+  return dept.departmentId === 4;
+});
+console.log(checkSalesPerson);
+```
+
 - [ ] **T-025**: Write a function to filter employees earning more than 6000.
+
+```js
+const salary6k = employees.filter((emp) => {
+  return emp.salary > 6000;
+});
+console.log(salary6k);
+```
+
 - [ ] **T-026**: Create an array of employee names only.
+
+```js
+const names = employees.map((name) => {
+  return name.name;
+});
+console.log(names);
+```
+
 - [ ] **T-027**: Calculate the total salary of all employees using
+
+```js
+const total = employees.reduce((emp, tot) => {
+  return (emp.salary = emp + tot.salary);
+}, 0);
+console.log(`Total is $${total}`);
+```
+
 - [ ] **T-028**: Is there any employee earning less than 5000?
+
+```js
+const salaryLess5k = employees.filter((emp) => {
+  if (emp.salary < 5000) return console.log(emp);
+});
+```
+
 - [ ] **T-029**: Find the first employee who earns exactly 5100.
+
+```js
+const salaryIs5100 = employees.filter((emp) => {
+  if (emp.salary === 5100) return console.log(emp);
+});
+```
+
 - [ ] **T-030**: Find the last employee in the "HR" department.
+
+```js
+const lastHR = employees.findLast((emp) => {
+  return emp.departmentId === 1
+})
+console.log(lastHR, departments[0]);
+console.log(`${lastHR.name} is last HR`);
+
+```
+
 - [ ] **T-031**: Find the first employee in the "Marketing" department.
+
+```js
+const firstMarkettingPerson = employees.find((emp) => {
+  return emp.departmentId === 3
+})
+console.log(firstMarkettingPerson);
+console.log(`${firstMarkettingPerson.name} is first Marketing person in array`);
+
+```
+
 - [ ] **T-032**: Check if all employees earn more than 4000.
+
+```js
+const above4k = employees.every((emp) => {
+  return emp.salary > 4000
+})
+console.log(above4k)
+
+```
+
 - [ ] **T-033**: Find the first employee in the "Sales" and "HR" department.
+
+```js
+
+```
+
 - [ ] **T-034**: Verify if all employees belong to a department listed in the departments array.
+
+```js
+
+```
+
 - [ ] **T-035**: Log each employee's name and department name to the console.
+
+```js
+
+```
+
 - [ ] **T-036**: Extract all employee names into a single array.
+
+```js
+
+```
+
 - [ ] **T-037**: Increment each employee's salary by 10%
+
+```js
+
+```
+
 - [ ] **T-038**: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
+
+```js
+
+```
+
 - [ ] **T-039**: Find the total salary of all employees working in the "Engineering" department.
+
+```js
+
+```
+
 - [ ] **T-040**: Check if there is any department where all employees earn more than 5000.
-- [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).
-      Find the total number of unique projects being handled across all employees.
+
+```js
+
+```
+
+- [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).Find the total number of unique projects being handled across all employees.
+
+```js
+
+```
+
 - [ ] **T-042**: For each employee, find their department name and return an array of employee names with their department names.
+
+```js
+
+```
+
 - [ ] **T-043**: Get a list of names of employees earning more than 6000.
+
+```js
+
+```
+
 - [ ] **T-044**: Write a for-of loop to print the names of all employees from the employees array.
+
+```js
+
+```
+
 - [ ] **T-045**: Using a for-of loop, print the names of employees earning more than 5000.
+
+```js
+
+```
+
 - [ ] **T-046**: Modify the for-of loop to destructure each employee object and log their name and salary.
+
+```js
+
+```
+
 - [ ] **T-047**: Write a for-of loop to match employees with their departments and print the results.
+
+```js
+
+```
+
 - [ ] **T-048**: Use Array.prototype.entries() with a for-of loop to print the index and name of each employee.
+
+```js
+
+```
 
 - [ ] **T-049**: Given the array-like object below, access the second element and log it:
 
-  ```js
-  const arrayLike = { 0: "First", 1: "Second", length: 2 };
-  ```
+```js
+const arrayLike = { 0: "First", 1: "Second", length: 2 };
+```
 
 - [ ] **T-050**: Write a function that takes a variable number of arguments and converts the arguments object into a real array using Array.from.
 - [ ] **T-051**: Write a snippet to select all div elements on a webpage (using document.querySelectorAll) and convert the resulting NodeList into an array.
