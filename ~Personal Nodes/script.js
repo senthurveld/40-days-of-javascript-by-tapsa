@@ -755,6 +755,10 @@ const departments = [
   { id: 4, name: "Sales" },
 ];
 
+let array = [['a', 1], ['b', 2], ['c', 3]];
+let obj = Object.fromEntries(array)
+console.log(obj);
+
 
 
 

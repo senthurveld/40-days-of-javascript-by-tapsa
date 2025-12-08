@@ -397,31 +397,49 @@ console.log(above4k)
 - [ ] **T-033**: Find the first employee in the "Sales" and "HR" department.
 
 ```js
+...
 
 ```
 
 - [ ] **T-034**: Verify if all employees belong to a department listed in the departments array.
 
 ```js
+let isEveryEmpFromDept = employees.every(emp => 
+  departments.some(dept => dept.id === emp.departmentId))
+console.log(isEveryEmpFromDept)
+
 
 ```
 
 - [ ] **T-035**: Log each employee's name and department name to the console.
 
 ```js
-
+const logs = departments.filter((dep) =>
+  employees.filter((emp) => {
+    if(dep.id === emp.departmentId) {
+      console.log(`${emp.name} is ${dep.name}`);
+      
+    }
+  })
+);
 ```
 
 - [ ] **T-036**: Extract all employee names into a single array.
 
 ```js
+const names = employees.flatMap(emp => emp.name)
+console.log(names);
 
 ```
 
 - [ ] **T-037**: Increment each employee's salary by 10%
 
 ```js
-
+const incremet = employees.filter((emp) => {
+  emp.salary = emp.salary * 1.1;
+  return Math.fround(emp.salary);
+});
+console.log(incremet);
 ```
 
 - [ ] **T-038**: Assume each employee can have multiple skills. Create an array of employee skills and flatten them. Example: [{name: "Alice", skills: ["Excel", "Management"]}, ...].
@@ -439,7 +457,10 @@ console.log(above4k)
 - [ ] **T-040**: Check if there is any department where all employees earn more than 5000.
 
 ```js
-
+const above5k = employees.every((emp) => {
+  return emp.salary > 5000
+})
+console.log(above5k)
 ```
 
 - [ ] **T-041**: Assume each employee has a projects array (e.g., { id: 1, name: "Alice", projects: ["Project A", "Project B"] }).Find the total number of unique projects being handled across all employees.
@@ -509,13 +530,61 @@ const arrayLike = { 0: "First", 1: "Second", length: 2 };
 - [ ] **T-054**: Use Array.from to convert a string like "Hello" into an array of characters.
 - [ ] **T-055**: For the array, ['apple', 'banana', 'apricot', 'mango', 'blueberry'], group words by their first letter using group().
 - [ ] **T-057**: From this array [3, 7, 3, 2, 3, 8, 7, 7], find the most repeated number. Hint: Use array method.
+
+ ```js
+
+ ```
 - [ ] **T-058**: Find the median of [5, 2, 9, 1, 3, 6, 8].
+
+ ```js
+
+ ```
 - [ ] **T-059**: Convert this array [['a', 1], ['b', 2], ['c', 3]], into { a: 1, b: 2, c: 3 } using array method(s).
+
+ ```js
+let array = [['a', 1], ['b', 2], ['c', 3]];
+let obj = Object.fromEntries(array)
+console.log(obj);
+ ```
 - [ ] **T-060**: Flatten and convert all letters to uppercase in one step using flatMap(). Here is input array: [['a', 'b'], ['c', 'd']].
+
+ ```js
+let array =  [['a', 'b'], ['c', 'd']];
+const dd = array.flatMap(inner=> inner.map(letter => letter.toUpperCase()))
+console.log(dd);
+
+
+ ```
 - [ ] **T-061**: Count the occurrences of each fruit in this array: ['apple', 'banana', 'apple', 'mango', 'banana', 'banana']
+
+ ```js
+
+ ```
 - [ ] **T-062**: Extract extract [‘b’, ‘c’, ‘d’] using slice() from this array: ['a', 'b', 'c', 'd', 'e']
+
+ ```js
+let array = ['a', 'b', 'c', 'd', 'e']
+
+let extra = array.slice(1,4)
+console.log(extra);
+ ```
 - [ ] **T-063**: Sort the array [9, 3, 1, 6, 8] in ascending order using toSorted()
+
+ ```js
+let array = [9, 3, 1, 6, 8];
+
+let ascSort = array.toSorted();
+console.log(ascSort);
+
+ ```
+
 - [ ] **T-064**: Reverse [1, 2, 3, 4, 5] using toReversed() and compare it with reverse()
+```js
+let ReverseIt = [1, 2, 3, 4, 5]
+console.log(ReverseIt.reverse())
+console.log(ReverseIt.toReversed())
+```
+
 - [ ] **T-065**: Group the follwing array elements based on age(Adult vs Non-Adult):
 
 ```js
@@ -527,4 +596,15 @@ const users = [
 ```
 
 - [ ] **T-066**: Find the longest word in this sentence using Array and Array methods: "40 Days of JavaScript by tapaScript is a powerful initiative".
+
+ ```js
+
+ ```
+
 - [ ] **T-067**: Find common elements between two arrays, [1, 2, 3, 4], [3, 4, 5, 6]
+
+ ```js
+const common = num1.filter( a => num2.includes(a) )
+console.log(common);
+
+ ```
