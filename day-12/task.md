@@ -134,4 +134,8 @@ const users = [
       'age': 26
   }
 ];
+
+for (let {name,address,age} of users) {
+  console.log(name,address,age)
+}
 ```

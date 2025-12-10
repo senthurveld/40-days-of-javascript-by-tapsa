@@ -77,3 +77,26 @@
 
 // console.log(Object.hasOwn(newPerson, "name" ||  person, "name"));
 
+
+const users = [
+  {
+      'name': 'Alex',
+      'address': '15th Park Avenue',
+      'age': 43
+  },
+  {
+      'name': 'Bob',
+      'address': 'Canada',
+      'age': 53
+  },
+  {
+      'name': 'Carl',
+      'address': 'Bangalore',
+      'age': 26
+  }
+];
+
+for (let {name, address, age} of users) {
+    console.log(name,address,age);
+}
+
