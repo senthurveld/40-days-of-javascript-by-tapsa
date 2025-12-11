@@ -34,7 +34,6 @@ function createExpenseTracker(name, budget) {
         "addExpense" : (amount) => {
             return console.log(`${amount}`);
         }
-        re
     }
 }
 let new1 = expense()

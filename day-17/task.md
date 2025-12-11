@@ -10,6 +10,7 @@ Consider the follwoing HTML:
 
 ```html
 <div id="text">This is a test. This test is only a test.</div>
+
 ```
 
 Now, find and display the most frequently occurring word. Also put a count of occurance beside it.
@@ -43,6 +44,19 @@ Now put alternate colors and background colors to each of the list tags. for exa
 - Then for the next car it will be reversed, the color is black and the background is white.
 - Then again the next one is white color and background black
 - So on.
+```js
+let items = document.querySelectorAll("li");
+console.log(items);
+// items = items.style.backgroundColor = "black"
+[...items].forEach((item,index) => {
+//   console.log((item.style.backgroundColor = "grey"));
+   index % 2 === 0
+    ? (item.style.backgroundColor = "black", item.style.color = "white")
+    : (item.style.backgroundColor = "white", item.style.color = "black");
+});
+
+
+```
 
 ## 3. Write different ways we can access DOM and what they returns
 
