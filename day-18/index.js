@@ -14,11 +14,9 @@ console.log("Day 18: DOM Manipulations");
 // - Build Project(s)
 // - Tasks
 
-
-
 // Creating Elements
 {
-    /*
+  /*
     const pElem = document.createElement("p");
     pElem.innerText = "This is a text added dynamically.";
     document.body.appendChild(pElem);
@@ -28,7 +26,7 @@ console.log("Day 18: DOM Manipulations");
 
 // Insert Elements
 {
-    /*
+  /*
         const span = document.createElement("span");
         span.innerText = "I am a Span";
         const pElem = document.querySelector("p")
@@ -40,7 +38,7 @@ console.log("Day 18: DOM Manipulations");
 // Modifying Content
 
 {
-    /*
+  /*
     const pElem = document.querySelector("p");
     pElem.innerHTML = "<u>Hello How</u> are You doing?"
 
@@ -54,7 +52,7 @@ console.log("Day 18: DOM Manipulations");
 // Removing/replacing Elements
 
 {
-    /*
+  /*
     let list = document.getElementById("myList");
     const itemToRemove = list.children[0];
     //list.removeChild(itemToRemove);
@@ -68,7 +66,7 @@ console.log("Day 18: DOM Manipulations");
 
 // Read, Write, and Remove Attributes
 {
-    /*
+  /*
     const imageElem = document.querySelector("img")
 
     console.log(imageElem.getAttribute('alt'))
@@ -86,34 +84,53 @@ console.log("Day 18: DOM Manipulations");
 // Travarsing/Navigating DOM
 
 {
-    // parentElement and parentNode
-    //const span = document.getElementById("text");
+  // parentElement and parentNode
+  //const span = document.getElementById("text");
 
-    // console.log("Parent Element", span.parentElement.parentElement);
-    // console.log("Parent Node", span.parentNode.parentNode);
+  // console.log("Parent Element", span.parentElement.parentElement);
+  // console.log("Parent Node", span.parentNode.parentNode);
 
-    // childern and childNodes
+  // childern and childNodes
 
-    // const mainElem = document.getElementById("main-id");
+  // const mainElem = document.getElementById("main-id");
 
-    // console.log("Children", mainElem.children);
-    // console.log("Child Node", mainElem.childNodes);
+  // console.log("Children", mainElem.children);
+  // console.log("Child Node", mainElem.childNodes);
 
-    // console.log("First Child", mainElem.firstChild);
-    // console.log("First Child Element", mainElem.firstElementChild);
+  // console.log("First Child", mainElem.firstChild);
+  // console.log("First Child Element", mainElem.firstElementChild);
 
+  // nextSibling
+  // nextElementSibling
+  // previousSibling
+  // previousElementSibling
 
-    // nextSibling
-    // nextElementSibling
-    // previousSibling
-    // previousElementSibling
+  const hOne = document.getElementById("something-id");
+  const p1 = document.getElementById("something-id2");
+  const p2 = document.getElementById("something-id3");
 
+  console.log(hOne.previousSibling);
+  console.log(hOne.previousElementSibling);
+
+  console.log(p1.previousSibling);
+  console.log(p1.previousElementSibling);
+
+  console.log(p2.previousSibling);
+  console.log(p2.previousElementSibling);
+
+  console.log(hOne.nextSibling);
+  console.log(hOne.nextElementSibling);
+
+  console.log(p1.nextSibling);
+  console.log(p1.nextElementSibling);
+
+  console.log(p2.nextSibling);
+  console.log(p2.nextElementSibling);
 }
-
 
 // Mnaipulating Styles
 {
-    /*const pElem = document.getElementById("p-id");
+  /*const pElem = document.getElementById("p-id");
     console.log(pElem.style)
     pElem.style.backgroundColor = "pink";
     */
@@ -121,7 +138,7 @@ console.log("Day 18: DOM Manipulations");
 
 // Manipulating Classes
 {
-    /*
+  /*
     const mainDivElem = document.getElementById("main-id");
 
     // console.log(mainDivElem.className)
@@ -147,7 +164,7 @@ console.log("Day 18: DOM Manipulations");
 
 // Controlling Visibilities
 {
-    /*
+  /*
     const mainDivElem = document.getElementById("main-id");
     //mainDivElem.style.display = "block";
 
@@ -156,6 +173,3 @@ console.log("Day 18: DOM Manipulations");
     mainDivElem.style.opacity = "1"
     */
 }
-
-
-
