@@ -23,3 +23,4 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 - Toggle theme using a button or switch.
 - Persist the theme in localStorage and apply on page load.
 - Change background and text color based on the theme.
+
