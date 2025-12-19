@@ -10,7 +10,7 @@ Please complete the following tasks and post them on the tapaScript Discord unde
 
 ```js
 function calculator(a, b, operationCallback) {
-  // Complete this function
+  
 }
 
 function add(x, y) {
