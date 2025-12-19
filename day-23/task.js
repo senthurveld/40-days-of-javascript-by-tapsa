@@ -134,17 +134,17 @@
 
 // Simulate Coin Toss
 
-// let coin = new Promise(function (resolve, reject) {
-//   resolve(Math.floor(Math.random() * 2));
-// })
-//   .then((result) => {
-//     if (result === 1) {
-//       console.log("Heads");
-//     } else {
-//       console.log("Tails");
-//     }
-//   })
-//   .catch((error) => console.log(error));
+let coin = new Promise(function (resolve, reject) {
+  resolve(Math.floor(Math.random() * 2));
+})
+  .then((result) => {
+    if (result === 1) {
+      console.log("Heads");
+    } else {
+      console.log("Tails");
+    }
+  })
+  .catch((error) => console.log(error));
 
 // ## 4. Promise with Condition
 // let age = 43;
@@ -240,5 +240,32 @@
 //     }, 3000);
 //   });
 
+// # 10. Implement fakeDBQuery()
 
-# 10. Implement fakeDBQuery() 
+// let bankDB = new Promise(function (resolve, reject) {
+//   const user = {
+//     id: 1,
+//     age: 21,
+//     name: "senthur",
+//     type: "major",
+//     year: 2018,
+//   };
+//   resolve(user);
+// });
+
+// bankDB
+//   .then((user) => {
+//     console.log(`Name is: ${user.name}`);
+//     return user.age;
+//   })
+//   .then((vaule, user) => {
+//     if (vaule > 18) {
+//       console.log(`${vaule} is allowed`);
+//     } else {
+//       console.log(`${vaule} is not allowed`);
+//     }
+//     return user;
+//   })
+//   .then(() => {
+//     console.log("closing account");
+//   });
