@@ -1,6 +1,6 @@
 
 // Get the API Key from here: https://openweathermap.org/api
-const API_KEY = "<YOUR_API_KEY>";
+const API_KEY = "e9b4ab37e67bf8563a114a0057846420";
 
 const queryWeather = async (city) => {
   try {
