@@ -48,3 +48,26 @@ function displayWeather(data) {
 function showError(message) {
   document.querySelector('#result').innerHTML = `<p style="color:red;">❌ ${message}</p>`;
 }
+
+
+(async () => {
+  const API_KEY = "a8524b8d";
+  const movie = "mersal";
+
+  const res = await fetch(
+    `https://www.omdbapi.com/?t=${movie}&apikey=${API_KEY}`
+  );  
+  if(!res.ok) {
+      throw new Error("Not Found on database");
+  } else {
+    console.log('good');
+  }
+
+  const data = await res.json();
+
+  console.log(data);
+  console.log(data.Title);
+  document.getElementById("img").innerHTML = data.Poster
+  
+  
+})();

@@ -84,4 +84,7 @@
 
 // getDetails();
 
-
+async function fetch() {
+  fetch("/api/data")
+  await data((res) => res.json());
+}
