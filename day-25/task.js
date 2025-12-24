@@ -67,7 +67,6 @@
 // }
 // postMethod(newData);
 
-
 // async function putMethod(postData) {
 //   const api = `https://jsonplaceholder.typicode.com/posts/1`;
 
@@ -80,7 +79,7 @@
 //     const data = await res.json();
 //     console.log(res);
 //     console.log(data);
-    
+
 //   } catch (error) {
 //     console.error(error);
 //   }
@@ -91,7 +90,6 @@
 //   body: "wanna cuma",
 // };
 // putMethod(newData);
-
 
 // async function patchMethod(postData) {
 //   const api = `https://jsonplaceholder.typicode.com/posts/1`;
@@ -115,8 +113,6 @@
 // };
 // patchMethod(newData);
 
-
-
 // async function delMethod(id) {
 //   const api = `https://jsonplaceholder.typicode.com/posts/${id}`;
 
@@ -134,30 +130,83 @@
 
 // delMethod(34);
 
+// async function ctLog(postData) {
+//   const api = `https://jsonplaceholder.typicode.com/posts`;
+
+//   try {
+//     const res = await fetch(api, {
+//       method : "POST",
+//       headers : {"Content-type" : "application/json"},
+//       body : JSON.stringify(postData)
+//     });
+//     const data = await res.json();
+//     console.log(res);
+//     console.log(data);
+
+//   }
+//   catch(error) {
+//     console.error(error);
+//   }
+// }
+
+// const newData = {
+//   "title" : "dei thambi thanga kamni",
+//   "body" : "ommala dei yarra",
+//   "userId" : 9
+// }
+// ctLog(newData);
+
+// async function errHand() {
+//   const api = `https://jsonplaceholder.gtypicode.co/`;
+
+//   try {
+//     const res = await fetch(api)
+//     if (!res.ok) {
+//       throw new Error(`Error: ${res.status}`)
+//     }
+//     const data = await res.json();
+//     console.log(res);
+//     console.log(data);
+
+//   } catch(error) {
+//     console.error(error.message);
+//   }
+// }
+
+// errHand()
 
 
-async function ctLog(postData) {
-  const api = `https://jsonplaceholder.typicode.com/posts`;
+// 34444444
 
-  try {
-    const res = await fetch(api, {
-      method : "POST",
-      headers : {"Content-type" : "application/json"},
-      body : JSON.stringify(postData)
-    });
-    const data = await res.json();
-    console.log(res);
-    console.log(data);
+// const download = document
+//   .getElementById("dBtn")
+//   .addEventListener("click", getFile);
+// const abort = document.getElementById("aBtn").addEventListener("click", () => {
+//   if (controler) {
+//     controler.abort("user aborted dwnld");
+//     console.log("download canceled");
     
-  }
-  catch(error) {
-    console.error(error);
-  }
-}
+//   }
+// });
+// const controler = new AbortController();
+// const signal = controler.signal;
+// const url = "./file.txt";
+// async function getFile() {
+//   try {
+//     console.log(`Downloading`);
 
-const newData = {
-  "title" : "dei thambi thanga kamni",
-  "body" : "ommala dei yarra",
-  "userId" : 9
-}
-ctLog(newData);
+//     setTimeout(async () => {
+//       const file = await fetch(url, { signal });
+//       console.log("Download Complete");
+
+//       const blob = await file.blob();
+//       const objectUrl = URL.createObjectURL(blob);
+
+//       const link = document.createElement(`a`);
+//       link.href = objectUrl;
+//       link.download = "./file.txt";
+//       link.click();
+//       URL.revokeObjectURL(objectUrl);
+//     }, 2500);
+//   } catch (err) {}
+// }
