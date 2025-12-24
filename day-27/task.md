@@ -77,6 +77,15 @@ Options are,
 - Let's do it!, f1, f1, f1, f1, in settimeout
 - Let's do it!, f1, , in settimeout, f1, f1, f1
 
+# Answer : Let's do it!, f1, f1, f1, f1, in settimeout
+
+Explanation : 
+- First "Lets do it" print bcoz global lvl execution
+- setTimeout goes to the callback stack
+- Then all f1() will executed
+-Finally callstack is empty, callback stack is have somthing,
+ then it prints lastly "in settimeout"
+
 ## 3. Which statements are `true`? Select multiple
 
 - [ ] JavaScript is single-threaded
@@ -84,12 +93,21 @@ Options are,
 - [ ] Only promises make JavaScript asynchronous
 - [ ] All function callbacks are asynchronous
 
+# Answers 
+
+- [x] JavaScript is single-threaded
+- [x] By default, JavaScript is synchronous
+
 ## 4. Which statement is `true`? Select Only one
 
 - (_) JavaScript Function Execution Stack(Call Stack) never gets empty.
 - (_) The job queue gets higher priority than the callback queue.
 - (_) The only job of Event Loop is to manage the Call Stack
 - (_) The StackOverflow exception is random.
+
+# Answer
+
+- (X) The job queue gets higher priority than the callback queue.
 
 ### 5. Guess the output
 
@@ -119,6 +137,18 @@ Options are,
 - Cartoon, Tom, Jerry, should it be right after Tom, before Jerry?,
 - Cartoon, Tom, should it be right after Tom, before Jerry?, Jerry
 - Error
+
+# answer 
+
+- Cartoon, Jerry, should it be right after Tom, before Jerry?, tom
+
+Explanation : 
+
+- create all global memory, then execution part look into cartoon() the log "Cartoon"
+- setTimeout goes to callback queue, Promise goes to job queue
+- Log "jerry"
+- Then promise from job queue
+- Last callback queue execute in callstack prints "TOm"
 
 ### 6. Guess the output
 
@@ -153,6 +183,18 @@ Options are,
 - Cartoon, Jerry, I am a Promise, right after tom and doggy! Really?, I am a Promise after Promise!, Doggy, Tom
 - Cartoon, Tom, Doggy, I am a Promise, right after tom and doggy! Really?, I am a Promise after Promise!, Jerry
 - None of the above.
+
+
+# answer 
+- Cartoon, Jerry, I am a Promise, right after tom and doggy! Really?, I am a Promise after Promise!, Doggy, Tom
+
+Explain : 
+
+- cartoon execute logs "cartoon"
+- callback, promise goes queues,
+- jerry execute logs ""jerry
+- then all promise execute logs two resolved promises
+- last callback 30ms delay Doggy, 50ms delay Tom
 
 ### 7. Guess the output
 
@@ -190,6 +232,20 @@ Options are,
 - f4, Boom, Sonic, Albert, f3, f1, f2
 - f4, Boom, Sonic, Albert, f1, f2, f3
 
+# Answer 
+
+- f4, Boom, Sonic, Albert, f1, f3, f2
+
+Explanation;
+
+- f4() execute and log;
+- callback queue, job queues have thier guys,
+- then callstack start to execute promises, Boom -> Sonic -> Albert
+- finally callback queue to callstack 
+    first f1(),
+    then f3(), bcoz 0ms
+    last f2() 2s delay
+
 ### 8. Guess the output
 
 ```js
@@ -222,3 +278,11 @@ Options are,
 - f4, Sonic, Albert, f3, f1, f2
 - f4, Sonic, Albert, f1, f2, f3
 - f4, Albert, Sonic, f1, f2, f3
+
+# Answer 
+
+- f4, Sonic, Albert, f1, f2, f3
+
+all same
+when f2() inside f1() 
+so f1, f2 last f3
