@@ -17,4 +17,5 @@ class Car {
 
 const car = new Car();
 car.accelerate();
+car.accelerate();
 console.log(car.getSpeed()); // 10
