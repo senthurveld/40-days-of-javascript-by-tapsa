@@ -34,7 +34,7 @@ function searchArray(query) {
 // Ordinary Search
 const doSearch = (e) => {
     const query = e.target.value;
-    searchArray(query);
+    searchArray(query); 
 };
 
 const debouncedSearch = debounce((e) => {
