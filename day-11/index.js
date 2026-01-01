@@ -106,13 +106,22 @@ timerInstance(); // 3
 
 // Closure in Event handler
 
-function setupButton() {
-    let clickCount = 0;
+// function setupButton() {
+//     let clickCount = 0;
 
-    document.getElementById("myButton").addEventListener("click", function() {
-        clickCount++;
-        console.log(`Button clicked ${clickCount} times`);
-    });
+//     document.getElementById("myButton").addEventListener("click", function() {
+//         clickCount++;
+//         console.log(`Button clicked ${clickCount} times`);
+//     });
+// }
+
+// setupButton();
+
+
+function testClosure() {
+  let x = 10;
+  return function () {
+    return x * x;
+  };
 }
-
-setupButton();
+console.log(testClosure()()); 

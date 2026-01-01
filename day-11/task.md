@@ -27,7 +27,7 @@ function testClosure() {
         return x * x;
     };
 }
-console.log(testClosure()());  // 100
+console.log(testClosure());  // 100
 // Same answer from above but this time return function is not stored as variable instead of anonymous func . so testClosure() & () excute it prints value and get from closure.
 ```
 
